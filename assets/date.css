@@ -1,0 +1,41 @@
+.log-in {
+    margin-left: 1100px!important;
+    position: relative;
+}
+
+.flowers {
+    height: 40px;
+    width: 60px;
+    margin-right: 0px;
+    border-radius: 50%;
+}
+
+#index {
+    background-image: url("../assets/images/rainy-day.jpeg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+}
+
+#results {
+    background-image: url("../assets/images/NAC.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+}
+
+#review {
+    background-image: url("../assets/images/romance-blue-orange.jpeg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
