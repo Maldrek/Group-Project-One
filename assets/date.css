@@ -3,7 +3,7 @@
     position: relative;
 }
 
-.flowers {
+.hearts {
     height: 40px;
     width: 60px;
     margin-right: 0px;
@@ -38,4 +38,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+}
+
+#recipe {
+    background: rgba(52, 58, 64, 0.7)!important;
+}
+
+#movie {
+    background: rgba(52, 58, 64, 0.8)!important;
 }

@@ -18,7 +18,7 @@
             <div class="navigation span col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <nav class="navbar navbar-expand-lg navbar-darg bg-dark">
                     <a class="navbar-brand text-white" href="index.html">
-                        <img class="flowers" src="assets/images/glass-heart.jpg"></img>
+                        <img class="hearts" src="assets/images/glass-heart.jpg"></img>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -39,16 +39,56 @@
                             </li>
                         </ul>
                         <form class="form-inline log-in my-2 my-lg-0">
-                            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Log-In</button>
+                            <button class="btn btn-outline-info text-white my-2 my-sm-0" type="submit">Log-In</button>
                         </form>
                     </div>
                 </nav>
             </div>
         </div>
+        <div class="row">
+            <div id="recipe" class="jumbotron text-white mx-auto mt-3 col-lg-12">
+                <div class="recipes col-lg-4">
+                    <h3 class="text-center"> Search for a recipe</h3>
+                    <hr class="bg-white">
+                    <form>
+                        <div class="form-group">
+                            <h5 class="text-center" for="add-ingredient">Enter Ingredient</h5>
+                            <input type="text" class="form-control" id="add-ingredient" placeholder="Enter ingredient here">
+                        </div>
+                        <div class="mx-auto text-center">
+                            <button type="submit" class="btn btn-outline-info bg-dark text-white" id="submitI">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="food"></div>
+        </div>
+        <div class="row">
+            <div id="recipe" class="jumbotron text-white mx-auto mt-3 col-lg-12">
+                <div class="recipes col-lg-4 float-right">
+                    <h3 class="text-center">Search for a random movie!</h3>
+                    <hr class="bg-white">
+                    <form>
+                        <div class="form-group">
+                            <h5 class="text-center" for="add-ingredient">Enter Genre</h5>
+                            <input type="text" class="form-control" id="add-ingredient" placeholder="Enter ingredient here">
+                        </div>
+                        <div class="mx-auto text-center">
+                            <button type="submit" class="btn btn-outline-info bg-dark text-white" id="submitM">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="food"></div>
+        </div>
+    </div>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script rel="stylesheet" type="text/javascript" src="date.js"></script>
+    <script rel="stylesheet" type="text/javascript" src="assets/modernizr.js"></script>
+    <script rel="stylesheet" type="text/javascript" src="assets/date.js"></script>
+
 </body>
 
 </html>
