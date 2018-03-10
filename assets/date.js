@@ -14,29 +14,17 @@ $("#submitI").on("click", function (event) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        console.log(response)
-    });         
+        var results = response.hits;
+        for (var i = results.length - 1; i >= 0; i--) {
+            results[i]
+        }
+        console.log(response);
+        $(".food").text(response.hits);
+        $("#add-ingredient").val("");
+    });
+    return false;
+});
+$("#submit").on("submit", function (event) {
+    event.preventDefault();
 });
 
-// // Geolocation Information 
-// var elMap = document.getElementById('loc');                 // HTML element
-// var msg = 'Sorry, we were unable to get your location.';    // No location msg
-// if (Modernizr.geolocation) {                                // Is geo supported
-//   navigator.geolocation.getCurrentPosition(success, fail);  // Ask for location
-//  if (elMap && elMap.textContent) {
-//    elMap.textContent = 'Checking location...'; 
-//  }               // Say checking...
-// } else {                                                    // Not supported
-//   elMap.textContent = msg;                                  // Add manual entry
-// }
-// function success(position) {                                // Got location
-//   msg = $('<h3>Longitude:<br>');                               // Create message
-//   msg += position.coords.longitude + '</h3>';               // Add longitude
-//   msg += '<h3>Latitude:<br>';                               // Create message
-//   msg += position.coords.latitude + '</h3>';                // Add latitude
-//   elMap.innerHTML = msg;                                    // Show location
-// }
-// function fail(msg) {                                        // Not got location
-//   elMap.textContent = msg;                                  // Show error message
-//   console.log(msg.code);                                    // Log the error
-// }
