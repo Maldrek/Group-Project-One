@@ -1,5 +1,6 @@
 .log-in {
-    margin-left: 1100px!important;
+    margin-left: 210px!important;
+    margin-right: 50px;
     position: relative;
 }
 
@@ -7,6 +8,7 @@
     height: 40px;
     width: 60px;
     margin-right: 0px;
+    margin-left: 20px;
     border-radius: 50%;
 }
 
@@ -41,9 +43,46 @@
 }
 
 #recipe {
-    background: rgba(52, 58, 64, 0.7)!important;
+    background: rgba(52, 58, 64, 0.7);
+    border-top: 5px double #17a2b8;
+    border-bottom: 5px double #17a2b8;
+
 }
 
 #movie {
-    background: rgba(52, 58, 64, 0.8)!important;
+    background: rgba(52, 58, 64, 0.8);
+    border-top: 5px double #17a2b8;
+    border-bottom: 5px double #17a2b8;
+}
+
+#postMates {
+    background: rgba(52, 58, 64, 0.8);
+    border-top: 5px double #17a2b8;
+    border-bottom: 5px double #17a2b8;
+    width: 100%;
+}
+
+#nav {
+    border-bottom: 5px solid #17a2b8!important;
+    width: 100%;
+}
+
+#navigation {
+    padding: 0px;
+}
+
+#footer {
+    padding: 0px;
+}
+
+footer {
+    height: 50px;
+    border-top: 5px solid #17a2b8!important;
+    position: relative;
+}
+
+#title {
+    margin-left: 5000px;
+    color: white;
+    padding: 0;
 }

@@ -15,8 +15,8 @@
 <body id="index">
     <div class="website">
         <div class="row">
-            <div class="navigation span col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <nav class="navbar navbar-expand-lg navbar-darg bg-dark">
+            <div id="navigation" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <nav id="nav" class="navbar navbar-expand-lg bg-dark">
                     <a class="navbar-brand text-white" href="index.html">
                         <img class="hearts" src="assets/images/glass-heart.jpg"></img>
                     </a>
@@ -32,12 +32,10 @@
                                 <a class="nav-link text-white" href="index.html">Main</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link text-white" href="results.html">Results</a>
-                            </li>
-                            <li class="nav-item active">
                                 <a class="nav-link text-white" href="review.html">Reviews</a>
                             </li>
                         </ul>
+                        <h3 id="title" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mx-auto text-center align-center">Rainy Date</h3>
                         <form class="form-inline log-in my-2 my-lg-0">
                             <button class="btn btn-outline-info text-white my-2 my-sm-0" type="submit">Log-In</button>
                         </form>
@@ -45,7 +43,7 @@
                 </nav>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-1">
             <div id="recipe" class="jumbotron text-white mx-auto mt-3 col-lg-12">
                 <div class="recipes col-lg-4">
                     <h3 class="text-center"> Search for a recipe</h3>
@@ -58,20 +56,22 @@
                         <div class="mx-auto text-center">
                             <button type="submit" class="btn btn-outline-info bg-dark text-white" id="submitI">Submit</button>
                         </div>
+                        <br>
+                        <h6 class="text-center">(Want to order in instead? Check out your options below!)</h6>
                     </form>
                 </div>
             </div>
-            <div class="food"></div>
+            <div class="foodPlace"></div>
         </div>
         <div class="row">
-            <div id="recipe" class="jumbotron text-white mx-auto mt-3 col-lg-12">
-                <div class="recipes col-lg-4 float-right">
+            <div id="movie" class="jumbotron text-white mx-auto mt-3 col-lg-12">
+                <div class="movies col-lg-4 float-right">
                     <h3 class="text-center">Search for a random movie!</h3>
                     <hr class="bg-white">
                     <form>
                         <div class="form-group">
-                            <h5 class="text-center" for="add-ingredient">Enter Genre</h5>
-                            <input type="text" class="form-control" id="add-ingredient" placeholder="Enter ingredient here">
+                            <h5 class="text-center" for="add-genre">Enter Genre</h5>
+                            <input type="text" class="form-control" id="add-genre" placeholder="Enter genre here">
                         </div>
                         <div class="mx-auto text-center">
                             <button type="submit" class="btn btn-outline-info bg-dark text-white" id="submitM">Submit</button>
@@ -79,14 +79,42 @@
                     </form>
                 </div>
             </div>
-            <div class="food"></div>
+            <div class="moviePlace"></div>
         </div>
-    </div>
-    </div>
+        <div class="row">
+            <div id="postMates" class="jumbotron text-white mx-auto mt-3 col-lg-12">
+                <div class="postMates col-lg-4 float-left">
+                    <h3 class="text-center">Search for Delivery Near You!</h3>
+                    <hr class="bg-white">
+                    <form>
+                        <div class="form-group">
+                            <h5 class="text-center" for="add-food-type">Enter Food Type</h5>
+                            <input type="text" class="form-control" id="add-ingredient" placeholder="Enter Food Type here">
+                        </div>
+                        <div class="mx-auto text-center">
+                            <button type="submit" class="btn btn-outline-info bg-dark text-white" id="submitP">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="postPlace"></div>
+        </div>
+        <div class="row">
+            <div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1 text-center bg-dark">
+                <footer>
+                    <h6 class="mt-3 text-white">&copy; Copyright
+                        <script type="text/javascript">
+                            document.write(new Date().getFullYear());
+                        </script>
+                    </h6>
+                </footer>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script rel="stylesheet" type="text/javascript" src="assets/modernizr.js"></script>
+    <script rel="stylesheet" type="text/javascript" src="assets/geolocate.js"></script>
     <script rel="stylesheet" type="text/javascript" src="assets/date.js"></script>
 
 </body>
