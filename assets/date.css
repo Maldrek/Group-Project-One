@@ -91,10 +91,13 @@ footer {
     padding-left: 100px;
 }
 
-#movieImage, #movieInfo, #foodImage,
-#foodInfo, #postPlace {
+#movieImage, #movieInfo, #postPlace {
     padding: 0px;
     height: 190.6px;
+}
+
+#foodInfo, #foodImage {
+    height: 222.6px;
 }
 
 #foodInfo, #postPlace {
