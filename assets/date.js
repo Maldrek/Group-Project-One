@@ -28,3 +28,14 @@ $("#submit").on("submit", function (event) {
     event.preventDefault();
 });
 
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyBEfzG397p3tAkbbjXXMS2MEDB5nNXZ_Hw",
+    authDomain: "maldrek-rainy-date.firebaseapp.com",
+    databaseURL: "https://maldrek-rainy-date.firebaseio.com",
+    projectId: "maldrek-rainy-date",
+    storageBucket: "maldrek-rainy-date.appspot.com",
+    messagingSenderId: "659863819058"
+};
+
+firebase.initializeApp(config);

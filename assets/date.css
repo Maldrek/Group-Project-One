@@ -23,18 +23,8 @@
     width:100%;
 }
 
-#results {
-    background-image: url("../assets/images/NAC.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width:100%;
-}
-
 #review {
-    background-image: url("../assets/images/romance-blue-orange.jpeg");
+    background-image: url("../assets/images/date-in.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -85,10 +75,16 @@ footer {
     position: relative;
 }
 
-#title {
+#titleR {
     margin-left: 5000px;
     color: white;
-    padding-left: 100px;
+    padding-left: 73px;
+}
+
+#titleI {
+    margin-left: 5000px;
+    color: white;
+    padding-left: 90px;
 }
 
 #movieImage, #movieInfo, #postPlace {
@@ -123,7 +119,40 @@ footer {
     float: right;
 }
 
+#testimonial {
+    background: rgba(52, 58, 64, 0.8);
+    border-top: 5px double #17a2b8;
+    border-bottom: 5px double #17a2b8;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#message {
+    height:100px;
+    overflow: auto;
+}
+
 .row {
     margin-right: 0px;
     margin-left: 0px;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    padding-left: 58px;
+    font-size: 20px;
+}
+
+.rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+     content: "\2605";
+     position: absolute;
+     color: #d6d328
 }
