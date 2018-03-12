@@ -4,12 +4,13 @@
     position: relative;
 }
 
-.hearts {
-    height: 40px;
-    width: 60px;
+.raincloud {
+    height: 50px;
+    width: 75px;
     margin-right: 0px;
     margin-left: 20px;
     border-radius: 50%;
+    border: 2px solid #17a2b8;
 }
 
 #index {
@@ -46,20 +47,23 @@
     background: rgba(52, 58, 64, 0.7);
     border-top: 5px double #17a2b8;
     border-bottom: 5px double #17a2b8;
-
+    margin-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 30px;
 }
 
 #movie {
     background: rgba(52, 58, 64, 0.8);
     border-top: 5px double #17a2b8;
     border-bottom: 5px double #17a2b8;
+    padding-top: 30px;
 }
 
 #postMates {
     background: rgba(52, 58, 64, 0.8);
     border-top: 5px double #17a2b8;
     border-bottom: 5px double #17a2b8;
-    width: 100%;
+    padding-top: 30px;
 }
 
 #nav {
@@ -73,16 +77,50 @@
 
 #footer {
     padding: 0px;
+    border-top: 5px solid #17a2b8!important;
 }
 
 footer {
     height: 50px;
-    border-top: 5px solid #17a2b8!important;
     position: relative;
 }
 
 #title {
     margin-left: 5000px;
     color: white;
-    padding: 0;
+    padding-left: 100px;
+}
+
+#movieImage, #movieInfo, #foodImage,
+#foodInfo, #postPlace {
+    padding: 0px;
+    height: 190.6px;
+}
+
+#foodInfo, #postPlace {
+    padding-left: 20px;
+}
+
+#movieInfo {
+    padding-right: 20px;
+    padding-left: 10px;
+    overflow: auto;
+    
+}
+
+#foodInfo {
+    overflow: auto;
+}
+
+#movieImage, #movieInfo {
+    float: left;
+}
+
+#foodImage, #foodInfo, #postPlace {
+    float: right;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
 }
