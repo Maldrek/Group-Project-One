@@ -1,3 +1,16 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.website {
+    flex: 1 0 auto;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
 .log-in {
     margin-left: 210px!important;
     margin-right: 50px;
@@ -87,7 +100,7 @@ footer {
     padding-left: 90px;
 }
 
-#movieImage, #movieInfo, #postPlace {
+#movieInfo, #postPlace {
     padding: 0px;
     height: 190.6px;
 }
@@ -115,6 +128,15 @@ footer {
     float: left;
 }
 
+#movieImage {
+    height: 280px;
+}
+
+#ImageM {
+    height: 280px;
+    width: 230px;
+}
+
 #foodImage, #foodInfo, #postPlace {
     float: right;
 }
@@ -127,9 +149,20 @@ footer {
     padding-bottom: 20px;
 }
 
+#newReview {
+    background: rgba(52, 58, 64, 0.8);
+    border: 5px double #17a2b8;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
 #message {
     height:100px;
     overflow: auto;
+}
+
+#imageF {
+    background-repeat: no-repeat;
 }
 
 .row {
@@ -140,7 +173,7 @@ footer {
 .rating {
     unicode-bidi: bidi-override;
     direction: rtl;
-    padding-left: 60px;
+    padding-left: 55px;
     font-size: 20px;
 }
 
@@ -154,5 +187,5 @@ footer {
 .rating > span:hover ~ span:before {
      content: "\2605";
      position: absolute;
-     color: #d6d328
+     color: gold;
 }

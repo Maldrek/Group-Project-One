@@ -47,39 +47,39 @@
             <div id="testimonial" class="jumbotron col-lg-12 col-md-12 col-sm-12 col-xs-12 text-white mt-3">
                 <h3 class="text-center">Rate the Date!</h3>
                 <div id="rating-div">
-                    <div class="rating col-lg-2 col-md-2 col-sm-2 col-xs-2 mx-auto">
-                        <span id="0" class="mx-auto text-center">☆</span>
-                        <span id="1" class="mx-auto text-center">☆</span>
-                        <span id="2" class="mx-auto text-center">☆</span>
-                        <span id="3" class="mx-auto text-center">☆</span>
+                    <div id="star-rating" class="rating col-lg-2 col-md-2 col-sm-2 col-xs-2 mx-auto">
+                        <span id="5" class="mx-auto text-center">☆</span>
                         <span id="4" class="mx-auto text-center">☆</span>
+                        <span id="3" class="mx-auto text-center">☆</span>
+                        <span id="2" class="mx-auto text-center">☆</span>
+                        <span id="1" class="mx-auto text-center">☆</span>
                     </div>
                     <br>
                     <form class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto">
                         <div class="form-row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First name">
+                                <input id="firstName" type="text" class="form-control" placeholder="First name">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name">
+                                <input id="lastName" type="text" class="form-control" placeholder="Last name">
                             </div>
                         </div>
                         <br>
                         <div class="form-row">
                             <div class="col-7">
-                                <input type="text" class="form-control" placeholder="City">
+                                <input id="city" type="text" class="form-control" placeholder="City">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="State">
+                                <input id="state" type="text" class="form-control" placeholder="State/Country">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Zip">
+                                <input id="zipCode" type="text" class="form-control" placeholder="Zip">
                             </div>
                         </div>
                         <br>
                         <div class="form-row">
                             <div class="form-group col">
-                                <textarea class="form-control" id="message" rows="3" placeholder="Leave your review here!"></textarea>
+                                <textarea id="textReview" class="form-control" id="message" rows="3" placeholder="Leave your review here!"></textarea>
                             </div>
                         </div>
                     </form>
@@ -88,6 +88,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div id="added-reviews" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
         </div>
         <div class="row">
             <div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-1 text-center bg-dark sticky-bottom">
@@ -102,12 +105,12 @@
         </div>
     </div>
 
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <script rel="stylesheet" type="text/javascript" src="assets/modernizr.js"></script>
     <script rel="stylesheet" type="text/javascript" src="assets/geolocate.js"></script>
     <script rel="stylesheet" type="text/javascript" src="assets/date.js"></script>
+
 </body>
 
 </html>
