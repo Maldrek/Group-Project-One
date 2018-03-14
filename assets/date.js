@@ -55,7 +55,7 @@ $("#submitM").on("click", function (event) {
     }).then(function (response) {
         console.log(response);
         var plot = response.Plot;
-        var pOne = $("<p>").text("Plot: " + plot);
+        var pOne = $("<h6>").text("Plot: " + plot);
         $("#movieInfo").append(pOne);
         var imgURL = response.Poster;
         var imageM = $("<img>").attr("src", imgURL);
@@ -195,3 +195,5 @@ database.ref().on("child_added", function (snapshot) {
 }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
 });
+
+// --------------------------------- END FIREBASE JS ------------------------------------ //

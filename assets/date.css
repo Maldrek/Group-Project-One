@@ -91,13 +91,13 @@ footer {
 #titleR {
     margin-left: 5000px;
     color: white;
-    padding-left: 85px;
+    padding-right: 290px;
 }
 
 #titleI {
     margin-left: 5000px;
     color: white;
-    padding-left: 90px;
+    padding-right: 290px;
 }
 
 #movieInfo, #postPlace {
@@ -117,6 +117,7 @@ footer {
     padding-right: 20px;
     padding-left: 10px;
     overflow: auto;
+    height:280px;
     
 }
 
