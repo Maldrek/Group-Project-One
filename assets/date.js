@@ -25,14 +25,17 @@ $("#submitI").on("click", function (event) {
             console.log(response.hits[i].recipe.ingredientLines);
             $("#foodInfo").empty();
             $("#foodImage").empty();
+            var recipeURL = response.hits[i].recipe.shareAs;
+            $("#foodInfo").append(response.hits[i].recipe.label + ":" + "<br><br>");
             for (var j = 0; j < response.hits[i].recipe.ingredientLines.length; j++) {
                 console.log(response.hits[i].recipe.ingredientLines[j]);
                 var imgRURL = response.hits[i].recipe.image;
                 var imageR = $("<img>").attr("src", imgRURL);
                 imageR.attr("alt", response.hits[i].recipe.label);
                 imageR.attr("title", response.hits[i].recipe.label);
-                $("#foodInfo").append(response.hits[i].recipe.ingredientLines[j] + "<br>");
+                $("#foodInfo").append(response.hits[i].recipe.ingredientLines[j] + "<br><br>");
             };
+            $("#foodInfo").append(recipeURL);
         };
         $("#foodImage").append(imageR);
     });
