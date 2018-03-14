@@ -35,7 +35,7 @@ $("#submitI").on("click", function (event) {
                 imageR.attr("title", response.hits[i].recipe.label);
                 $("#foodInfo").append(response.hits[i].recipe.ingredientLines[j] + "<br><br>");
             };
-            $("#foodInfo").append(recipeURL);
+            $("#recipeURLDiv").append(recipeURL);
         };
         $("#foodImage").append(imageR);
     });
