@@ -12,7 +12,7 @@ $("#submitI").on("click", function (event) {
     var ingredient = $("#add-ingredient").val().trim();
     // The ingredient from the textbox is then added to our array
     ingredients.push(ingredient);
-    var queryURL = "https://api.edamam.com/search?q=" + ingredient + "&app_id=d0f24b12&app_key=" + apiKey + "&from=0&to=1";
+    var queryURL = "https://api.edamam.com/search?q=" + ingredient + "&app_id=d0f24b12&app_key=" + apiKey + "&from=0&to=5";
     $.ajax({
         url: queryURL,
         method: 'GET'
@@ -21,7 +21,7 @@ $("#submitI").on("click", function (event) {
 
         var results = response.hits
 
-        for (var i = 0; i < results.length; i++){
+        for (var i = 0; i < results.length; i++) {
             console.log(response.hits[i].recipe.ingredientLines);
             $("#foodInfo").empty();
             $("#foodImage").empty();
@@ -29,6 +29,8 @@ $("#submitI").on("click", function (event) {
                 console.log(response.hits[i].recipe.ingredientLines[j]);
                 var imgRURL = response.hits[i].recipe.image;
                 var imageR = $("<img>").attr("src", imgRURL);
+                imageR.attr("alt", response.hits[i].recipe.label);
+                imageR.attr("title", response.hits[i].recipe.label);
                 $("#foodInfo").append(response.hits[i].recipe.ingredientLines[j] + "<br>");
             };
         };
@@ -36,33 +38,33 @@ $("#submitI").on("click", function (event) {
     });
     return false;
 });
-$("#submit").on("submit", function (event) {
-    event.preventDefault();
-});
+
 // -----------------END Edamam API------------------ //
 
 // ---------------------------------- OMDB API ---------------------------------------- //
 
 var movies = [];
-$("#submitM").on("click", function(event) {
-       event.preventDefault();
-       var movie = $("#add-genre").val().trim();
-       movies.push(movie); 
-       var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=b9fb94d";
-       $.ajax({
-           url: queryURL,
-           method: "GET"
-       }).then(function(response) {
-           console.log(response);
-           var plot = response.Plot;
-           var pOne = $("<p>").text("Plot: " + plot);
-           $("#movieInfo").append(pOne);
-           var imgURL = response.Poster;
-           var imageM = $("<img>").attr("src", imgURL);
-           imageM.attr("id", "ImageM");
-           $("#movieImage").append(imageM);
-       });
-   });
+$("#submitM").on("click", function (event) {
+    event.preventDefault();
+    var movie = $("#add-genre").val().trim();
+    movies.push(movie);
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&plot=full&apikey=b9fb94d";
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        var plot = response.Plot;
+        var pOne = $("<p>").text("Plot: " + plot);
+        $("#movieInfo").append(pOne);
+        var imgURL = response.Poster;
+        var imageM = $("<img>").attr("src", imgURL);
+        imageM.attr("id", "ImageM");
+        $("#movieImage").append(imageM);
+    });
+    $("#movieInfo").empty();
+    $("#movieImage").empty();
+});
 
 // ---------------------------------- END OMDB API -------------------------------------- //
 
@@ -160,7 +162,7 @@ database.ref().on("child_added", function (snapshot) {
     let nameInfo = $("<h5>");
     nameInfo.addClass("text-white");
     nameInfo.text(value.First + " " + value.Last);
-    
+
     // append nameInfo to the newDiv
     div1.append(nameInfo);
 
